@@ -1,4 +1,5 @@
 # KeyCatcher
+A silly project for a co-worker with too many security keys to keep track of
 ## What's New
 
 ### v1.2 Emergency Patch
@@ -12,4 +13,3 @@
 
 ### v 1.0
 Four input/button pairs that copy the value of the input box when the button is clicked.
- 
