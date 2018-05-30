@@ -129,3 +129,23 @@ third.addEventListener('click', function() {
 //     bell.play()
 //     }, 10800000);
 // });
+
+let current = new Date();
+
+let risk = current.getTime();
+
+let riskTwo = risk += 10800000;
+
+let risky = new Date(risk);
+
+let timer = current.setHours(3);
+
+let future = new Date(timer);
+
+console.log(`current = ${current}`);
+console.log(`risk = ${risk}`);
+console.log(`risk2 equals ${riskTwo}`);
+console.log(risk === riskTwo);
+console.log(`risky is a new Date object with the current time as a param: ${risky}`);
+console.log(`timer = ${timer}`);
+console.log(`future is ${future}`);
