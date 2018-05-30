@@ -12,13 +12,37 @@ h1 {
   align-items: center;
   height: 75vh;
 }
-.form {
-  vertical-align: middle;
+
+/* #form {
+  border: 2px dotted red;
+} */
+
+.box {
+  margin: 25px auto 0 auto;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.keybox {
-  margin: 25px auto 0 auto;
+.user {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.user input {
+  font-weight: bold;
+  border: none;
   text-align: center;
+  font-size: 1.25em;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.key {
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {
@@ -37,19 +61,20 @@ footer p {
   align-self: center;
 }
 
-.box {
+.popup {
   position: absolute;
   top: 37%;
   left: 35%;
   height: 250px;
   width: 500px;
   border-radius: 10px;
-  background: #bfbfbf;
-  color: #446CB3;
+  background: #8E44AD;
+  color: #1BA39C;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+  opacity: .95;
 }
 
-.box h3 {
+.popup h3 {
   text-align: center;
   padding-top: 110px;
 }
@@ -60,7 +85,7 @@ footer p {
 
 .slide {
   animation-name: slide;
-  animation-duration: .75s;
+  animation-duration: 1.75s;
   animation-timing-function: ease-out;
 }
 
@@ -70,3 +95,16 @@ footer p {
   90% {top: 34%;}
   100% {top: 37%;}
 }
+
+/* .shrink {
+  animation-name: shrink;
+  animation-duration: 1s;
+}
+
+@keyframes shrink {
+  0% {width: 500px;}
+  25% {width: 300px;}
+  50% {width: 200px;}
+  75% {width: 100px;}
+  100% {width: 2px;}
+} */
