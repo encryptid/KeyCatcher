@@ -57,3 +57,16 @@ footer p {
 .off {
   display: none;
 }
+
+.slide {
+  animation-name: slide;
+  animation-duration: .75s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slide {
+  0% {top: -10px;}
+  70% {top: 40%;}
+  90% {top: 34%;}
+  100% {top: 37%;}
+}
