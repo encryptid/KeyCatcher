@@ -2,6 +2,14 @@
 A silly project for a co-worker with too many security keys to keep track of
 ## What's New
 
+### v1.5
+* Timers implemented!
+
+### v1.4
+* Experimenting with Time
+* Possibly re-arranging the fabric of existence.
+* Something something Epoch Time.
+
 ### v1.3
 * Tidied up individual sections
 * Added usernames 
