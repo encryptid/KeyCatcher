@@ -20,6 +20,32 @@ let first = document.getElementById('first');
 let uno = document.querySelector(".popup.one");
 
 first.addEventListener('click', function() {
+
+let ticker = document.querySelector('#ticker-one p');
+console.log(ticker);
+
+let now = new Date().getTime();
+let countDown = now + 10800000;
+let counter = 0;
+
+let timer = setInterval(function () {
+    
+    now = new Date().getTime();
+
+    counter = countDown - now;
+
+    let days = Math.floor(counter / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((counter % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((counter % (1000 * 60)) / 1000);
+    console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+    ticker.textContent =`${hours}h ${minutes}m ${seconds}s`;
+    if (counter <= 1) {
+        clearInterval(timer);
+        console.log('stop!');
+    }
+}, 1000);
+
   let remove = function () {
     uno.classList.remove('off');
     console.log('reveal!');
@@ -55,6 +81,32 @@ let two = document.getElementById('two');
 let second = document.getElementById('second');
 let dos = document.querySelector('.popup.two')
 second.addEventListener('click', function() {
+
+  let ticker = document.querySelector('#ticker-two p');
+  // console.log(ticker);
+
+let now = new Date().getTime();
+let countDown = now + 10800000;
+let counter = 0;
+
+let timer = setInterval(function () {
+    
+    now = new Date().getTime();
+
+    counter = countDown - now;
+
+    let days = Math.floor(counter / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((counter % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((counter % (1000 * 60)) / 1000);
+    console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+    ticker.textContent =`${hours}h ${minutes}m ${seconds}s`;
+    if (counter <= 1) {
+        clearInterval(timer);
+        // console.log('stop!');
+    }
+}, 1000);
+
   let remove = function () {
     dos.classList.remove('off');
     console.log('reveal!');
@@ -90,6 +142,32 @@ let three = document.getElementById('three');
 let third = document.getElementById('third');
 let tres = document.querySelector('.popup.three');
 third.addEventListener('click', function() {
+
+  let ticker = document.querySelector('#ticker-three p');
+  console.log(ticker);
+
+  let now = new Date().getTime();
+  let countDown = now + 10800000;
+  let counter = 0;
+
+  let timer = setInterval(function () {
+    
+    now = new Date().getTime();
+
+    counter = countDown - now;
+
+    let days = Math.floor(counter / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((counter % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((counter % (1000 * 60)) / 1000);
+    console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+    ticker.textContent =`${hours}h ${minutes}m ${seconds}s`;
+    if (counter <= 1) {
+        clearInterval(timer);
+        console.log('stop!');
+    }
+}, 1000);
+
   let remove = function () {
     tres.classList.remove('off');
     console.log('reveal!');

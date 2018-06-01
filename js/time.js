@@ -77,9 +77,11 @@ What information do we need?
 ** Initially it will be 10800000, but as the current time updates, that number should decrease.
 */
 
+let ticker = document.querySelector('.ticker p');
+console.log(ticker);
 
 let now = new Date().getTime();
-let countDown = now + 10000//10800000;
+let countDown = now + 10800000;
 let counter = 0;
 
 let timer = setInterval(function () {
@@ -93,7 +95,8 @@ let timer = setInterval(function () {
     let minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((counter % (1000 * 60)) / 1000);
     console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-    if (counter < 0) {
+    ticker.textContent =`${hours}h ${minutes}m ${seconds}s`;
+    if (counter <= 1) {
         clearInterval(timer);
         console.log('stop!');
     }

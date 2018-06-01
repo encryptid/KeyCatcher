@@ -17,18 +17,25 @@ h1 {
   border: 2px dotted red;
 } */
 
+.copy-wrap {
+  margin-right: 20px;
+}
+
 .box {
   margin: 25px auto 0 auto;
   padding: 10px;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
+  display: flex;
 }
 
 .user {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
+  /* padding-bottom: 2vh;
+  border-bottom: 1px solid #ccc; */
 }
 
 .user input {
@@ -43,6 +50,23 @@ h1 {
 .key {
   display: flex;
   justify-content: space-between;
+}
+
+.ticker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 3em;
+  font-family: monospace;
+  border: 3px solid black;
+  border-radius: 5px;
+  background: black;
+  color: white;
+}
+
+.ticker p {
+  margin: 0;
 }
 
 footer {
