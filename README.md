@@ -2,6 +2,9 @@
 A silly project for a co-worker with too many security keys to keep track of
 ## What's New
 
+### v1.6
+* Stripped back to one timer for all keys per client.
+
 ### v1.5
 * Timers implemented!
 

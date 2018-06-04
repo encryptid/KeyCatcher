@@ -13,21 +13,28 @@ h1 {
   height: 75vh;
 }
 
-/* #form {
-  border: 2px dotted red;
-} */
-
-.copy-wrap {
-  margin-right: 20px;
+#form {
+  background: #ccc;
+  padding: 2vh;
+  border-radius: .5em;
 }
 
+/* .copy-wrap {
+  padding-right: 12px;
+  margin-right: 12px;
+  border-right: 1px solid #ccc;
+} */
+
 .box {
-  margin: 25px auto 0 auto;
-  padding: 10px;
+  margin: 0 auto;
+  padding: 25px 10px;
   text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   display: flex;
+  border-bottom: 1px solid gray;
+}
+
+.box:first-child {
+  margin-top: 0;
 }
 
 .user {
@@ -44,7 +51,8 @@ h1 {
   text-align: center;
   font-size: 1.25em;
   width: 200px;
-  margin-right: 10px;
+  margin-right: 20px;
+  background: #ccc;
 }
 
 .key {
@@ -52,11 +60,19 @@ h1 {
   justify-content: space-between;
 }
 
-.ticker {
+/* .ticker {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
+} */
+
+/* aside {
+  width: 100%;
+} */
+
+.ticker p {
+  text-align: center;
+  margin: 2vh auto;
   font-size: 3em;
   font-family: monospace;
   border: 3px solid black;
@@ -65,8 +81,9 @@ h1 {
   color: white;
 }
 
-.ticker p {
-  margin: 0;
+.ticker button {
+  display: block;
+  margin: 0 auto;
 }
 
 footer {
