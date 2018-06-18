@@ -212,13 +212,16 @@ let start = document.getElementById('timer');
 start.addEventListener('click', function () {
   let ticker = document.querySelector('#ticker p');
   console.log(ticker);
+  // start.classList.add('bounce');
+  // setTimeout(function() {
+  //   start.classList.remove('bounce');
+  // }, 200)
 
   let now = new Date().getTime();
   let countDown = now + 10800000;
   let counter = 0;
 
   let timer = setInterval(function () {
-
     now = new Date().getTime();
 
     counter = countDown - now;
@@ -234,4 +237,6 @@ start.addEventListener('click', function () {
       console.log('stop!');
     }
   }, 1000);
+  
+  
 })
