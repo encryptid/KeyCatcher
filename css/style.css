@@ -34,8 +34,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
-  /* padding-bottom: 2vh;
-  border-bottom: 1px solid #ccc; */
 }
 
 .user input {
@@ -44,12 +42,17 @@ h1 {
   text-align: center;
   font-size: 1.25em;
   width: 200px;
-  margin-right: 10px;
 }
 
 .key {
   display: flex;
   justify-content: space-between;
+}
+
+.key input {
+  text-align: center;
+  min-width: 245px;
+  margin-right: 10px;
 }
 
 .ticker {
@@ -67,6 +70,8 @@ h1 {
 
 .ticker p {
   margin: 0;
+  padding: 5px;
+  min-width: 225px;
 }
 
 footer {
