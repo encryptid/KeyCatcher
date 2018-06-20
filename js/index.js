@@ -1,6 +1,6 @@
 let bell = new Audio('sounds/definite.mp3');
 
-Date.prototype.getTimer = function() {
+Date.prototype.getTimer = function () {
   this.setHours(this.getHours() + 3);
   return this
 }
@@ -28,7 +28,7 @@ let one = document.getElementById('one');
 let first = document.getElementById('first');
 let uno = document.querySelector(".popup.one");
 
-first.addEventListener('click', function() {
+first.addEventListener('click', function () {
   let remove = function () {
     uno.classList.remove('off');
     console.log('reveal!');
@@ -44,9 +44,10 @@ first.addEventListener('click', function() {
 });
 
 //Begin first timer
-const begin = document.querySelector('.btn-timer');
 
-begin.addEventListener('click', function () {
+let time = null;
+
+function newTimer() {
   let ticker = document.querySelector('#ticker-one p');
   console.log(ticker);
 
@@ -71,6 +72,35 @@ begin.addEventListener('click', function () {
     }
   }, 1000);
 
+  const begin = document.querySelector('.btn-timer');
+
+  begin.addEventListener('click', newTimer);
+
+  // function newTimer () {
+  //   let ticker = document.querySelector('#ticker-one p');
+  //   console.log(ticker);
+
+  //   let now = new Date().getTime();
+  //   let countDown = now + 10800000;
+  //   let counter = 0;
+
+  //   let timer = setInterval(function () {
+  //     now = new Date().getTime();
+
+  //     counter = countDown - now;
+
+  //     let days = Math.floor(counter / (1000 * 60 * 60 * 24));
+  //     let hours = Math.floor((counter % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //     let minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
+  //     let seconds = Math.floor((counter % (1000 * 60)) / 1000);
+  //     console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+  //     ticker.textContent = `${hours}h ${minutes}m ${seconds}s`;
+  //     if (counter <= 1) {
+  //       clearInterval(timer);
+  //       console.log('stop!');
+  //     }
+  //   }, 1000);
+
   // let remove = function () {
   //   uno.classList.remove('off');
   //   console.log('reveal!');
@@ -83,12 +113,13 @@ begin.addEventListener('click', function () {
   // setTimeout(function () {
   //   uno.classList.add('off');
   // }, 2000);
-  setTimeout(function () {
-    console.log('first timer started');
-    bell.play()
-  }, 10800000);
+  // setTimeout(function () {
+  //   console.log('first timer started');
+  //   bell.play()
+  // }, 10800000);
   // clearInterval(timer);
-});
+  // });
+};
 
 // Copy Second Login
 
