@@ -2,6 +2,22 @@
 A silly project for a co-worker with too many security keys to keep track of
 ## What's New
 
+### v1.7
+* Rolled back to individual timers for each username.
+* Added an extra field for a new user.
+* Known issue: when the button is clicked, a new date is created, causing two timers to run in tandem on one user and making the values jump back and forth between each.
+
+### v1.6
+* Stripped back to one timer for all keys per client.
+
+### v1.5
+* Timers implemented!
+
+### v1.4
+* Experimenting with Time
+* Possibly re-arranging the fabric of existence.
+* Something something Epoch Time.
+
 ### v1.3
 * Tidied up individual sections
 * Added usernames 
