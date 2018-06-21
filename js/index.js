@@ -45,32 +45,65 @@ first.addEventListener('click', function () {
 
 //Begin first timer
 
-let time = null;
+// let time = null;
 
-function newTimer() {
+// function newTimer() {
+//   let ticker = document.querySelector('#ticker-one p');
+//   console.log(ticker);
+
+//   let now = new Date().getTime();
+//   let countDown = now + 10800000;
+//   let counter = 0;
+
+//   let timer = setInterval(function () {
+//     now = new Date().getTime();
+
+//     counter = countDown - now;
+
+//     let days = Math.floor(counter / (1000 * 60 * 60 * 24));
+//     let hours = Math.floor((counter % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//     let minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
+//     let seconds = Math.floor((counter % (1000 * 60)) / 1000);
+//     console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+//     ticker.textContent = `${hours}h ${minutes}m ${seconds}s`;
+//     if (counter == 0) {
+//       clearInterval(timer);
+//       console.log('stop!');
+//     }
+//   }, 999);
+// };
+
+let timer = function () {
   let ticker = document.querySelector('#ticker-one p');
   console.log(ticker);
-
-  let now = new Date().getTime();
+  now = new Date().getTime();
+  console.log(`now: ${now}`);
   let countDown = now + 10800000;
+  console.log(`countdown: ${countDown}`);
   let counter = 0;
+  console.log(`counter: ${counter}`);
 
-  let timer = setInterval(function () {
-    now = new Date().getTime();
+  counter = countDown - now;
+  console.log(`now counter is: ${counter}`);
 
-    counter = countDown - now;
+  let days = Math.floor(counter / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((counter % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((counter % (1000 * 60)) / 1000);
+  console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+  ticker.textContent = `${hours}h ${minutes}m ${seconds}s`;
+  if (counter == 0) {
+    clearInterval(timer);
+    console.log('stop!');
+  }
+}
 
-    let days = Math.floor(counter / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((counter % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((counter % (1000 * 60)) / 1000);
-    console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-    ticker.textContent = `${hours}h ${minutes}m ${seconds}s`;
-    if (counter <= 1) {
-      clearInterval(timer);
-      console.log('stop!');
-    }
-  }, 1000);
+function newTimer() {
+  // let now = new Date().getTime();
+  // console.log(now);
+  setInterval(timer, 999);
+
+};
 
   const begin = document.querySelector('.btn-timer');
 
@@ -119,7 +152,7 @@ function newTimer() {
   // }, 10800000);
   // clearInterval(timer);
   // });
-};
+// };
 
 // Copy Second Login
 
