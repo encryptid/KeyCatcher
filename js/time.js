@@ -85,7 +85,7 @@ let countDown = now + 10800000;
 let counter = 0;
 
 let timer = setInterval(function () {
-    
+
     now = new Date().getTime();
 
     counter = countDown - now;
@@ -95,14 +95,14 @@ let timer = setInterval(function () {
     let minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((counter % (1000 * 60)) / 1000);
     console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-    ticker.textContent =`${hours}h ${minutes}m ${seconds}s`;
+    ticker.textContent = `${hours}h ${minutes}m ${seconds}s`;
     if (counter <= 1) {
         clearInterval(timer);
         console.log('stop!');
     }
 }, 1000);
 
-/*
+
 // Set the date we're counting down to
 let countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
 // Should return the entered date in ms
@@ -133,4 +133,51 @@ let x = setInterval(function () {
         document.getElementById("demo").innerHTML = "EXPIRED";
     }
 }, 1000);
-*/
+
+
+//MORE TIME!!!!!!!
+
+(function () {
+    "use strict";
+    var secondsLabel = document.getElementById('seconds'),
+        minutesLabel = document.getElementById('minutes'),
+        hoursLabel = document.getElementById('hours'),
+        totalSeconds = 0,
+        startButton = document.getElementById('start'),
+        stopButton = document.getElementById('stop'),
+        resetButton = document.getElementById('reset'),
+        timer = null;
+    startButton.onclick = function () {
+        if (!timer) {
+            timer = setInterval(setTime, 1000);
+        }
+    };
+    stopButton.onclick = function () {
+        if (timer) {
+            clearInterval(timer);
+            timer = null;
+        }
+    };
+    resetButton.onclick = function () {
+        if (timer) {
+            totalSeconds = 0;
+            stop();
+        }
+    };
+
+    function setTime() {
+        totalSeconds++;
+        secondsLabel.innerHTML = pad(totalSeconds % 60);
+        minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+        hoursLabel.innerHTML = pad(parseInt(totalSeconds / 3600))
+    }
+
+    function pad(val) {
+        var valString = val + "";
+        if (valString.length < 2) {
+            return "0" + valString;
+        } else {
+            return valString;
+        }
+    }
+})();
