@@ -46,10 +46,16 @@ let countdown = function() {
 }
 
 start.addEventListener('click', function(){
+    console.log('start clicked!')
     setTime();
     setTimer();
     timeCheck();
-    setInterval(countDown(),999);
+    setInterval(countdown,999);
+})
+
+stop.addEventListener('click', function(){
+    console.log('stop clicked!');
+    clearInterval(countdown);
 })
 
     // setTime();
