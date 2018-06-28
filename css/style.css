@@ -18,7 +18,11 @@ h1 {
 } */
 
 .copy-wrap {
-  margin-right: 20px;
+  padding-right: 10px;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .box {
@@ -56,22 +60,26 @@ h1 {
 }
 
 .ticker {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-  font-size: 3em;
-  font-family: monospace;
-  border: 3px solid black;
-  border-radius: 5px;
-  background: black;
-  color: white;
+  justify-content: center; */
+  padding-left: 10px;
 }
 
-.ticker p {
+.ticker > p {
   margin: 0;
   padding: 5px;
   min-width: 225px;
+  font-size: 3em;
+  font-family: monospace;
+  background: black;
+  color: white;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.ticker button {
+  margin-top: 10px;
 }
 
 footer {
