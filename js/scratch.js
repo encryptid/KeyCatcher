@@ -1,10 +1,13 @@
+const boxes = document.querySelectorAll('.box');
+boxes.forEach(function() {
+console.log(`initOne loaded`);
 let time = 0;
 let timer = 0;
 let cd = 0;
 let timeInit;
 let ticker = document.querySelector('.ticker p');
 let start = document.querySelector('.btn-timer');
-let stop = document.querySelector('.btn-stop');
+// let stop = document.querySelector('.btn-stop');
 
 
 //convert time
@@ -60,14 +63,4 @@ start.addEventListener('click', function(){
     setTimer();
     timeInit = setInterval(runTimer, 1000);
 });
-
-// stop.addEventListener('click', function(){
-//     console.log('stop clicked!');
-//     clearInterval(timeInit);
-// })
-
-    // setTime();
-    // setTimer();
-    // timeCheck();
-    // countdown();
-    // setInterval(countdown, 999);
+});
