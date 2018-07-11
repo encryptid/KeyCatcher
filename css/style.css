@@ -1,3 +1,7 @@
+body {
+  background-image: url('../images/taton-moise-474481-unsplash.jpg');
+  background-size: 100%;
+}
 h1 {
   text-align: center;
   color: white;
@@ -32,6 +36,8 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 5px;
   display: flex;
+  background-color: white;
+  opacity: .9;
 }
 
 .user {
