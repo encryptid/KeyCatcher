@@ -2,6 +2,10 @@
 A silly project for a co-worker with too many security keys to keep track of
 ## What's New
 
+###v2.0
+* Each username gets a field and a dedicated timer
+* Modals removed altogether
+
 ### v1.7
 * Rolled back to individual timers for each username.
 * Added an extra field for a new user.
