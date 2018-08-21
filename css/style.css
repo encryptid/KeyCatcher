@@ -27,17 +27,31 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+#form {
+  background: #ccc;
+  padding: 2vh;
+  border-radius: .5em;
 }
 
+/* .copy-wrap {
+  padding-right: 12px;
+  margin-right: 12px;
+  border-right: 1px solid #ccc;
+} */
+
 .box {
-  margin: 25px auto 0 auto;
-  padding: 10px;
+  margin: 0 auto;
+  padding: 25px 10px;
   text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   display: flex;
   background-color: white;
   opacity: .9;
+  border-bottom: 1px solid gray;
+}
+
+.box:first-child {
+  margin-top: 0;
 }
 
 .user {
@@ -52,6 +66,8 @@ h1 {
   text-align: center;
   font-size: 1.25em;
   width: 200px;
+  margin-right: 20px;
+  background: #ccc;
 }
 
 .key {
@@ -76,6 +92,20 @@ h1 {
   margin: 0;
   padding: 5px;
   min-width: 225px;
+
+/* .ticker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+/* aside {
+  width: 100%;
+} */
+
+.ticker p {
+  text-align: center;
+  margin: 2vh auto;
   font-size: 3em;
   font-family: monospace;
   background: black;
@@ -86,6 +116,8 @@ h1 {
 
 .ticker button {
   margin-top: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
 footer {
@@ -151,3 +183,17 @@ footer p {
   75% {width: 100px;}
   100% {width: 2px;}
 } */
+
+@keyframes bounce {
+  0% {width: 103px; height: 38px;}
+  25% {width: 200px; height: 80px;}
+  50% {width: 300px; height: 120px;}
+  75% {width: 200px; height: 80px;}
+  100% {width: 103px; height: 38px;}
+}
+
+.bounce {
+  position: absolute;
+  animation-name: bounce;
+  animation-duration: .2s;
+}
