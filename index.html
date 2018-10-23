@@ -8,6 +8,9 @@
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
 
   <link rel="stylesheet" href="css/style.css">
+  <!-- <script src="js/indexAlt.js"></script> -->
+  <script src="js/scratch.js"></script>
+
 </head>
 
 <body>
@@ -16,7 +19,7 @@
     <sup>&trade;</sup>
   </h1>
 
-  <div class="popup one off slide">
+  <!-- <div class="popup one off slide">
     <h3>First timer begun!</h3>
   </div>
 
@@ -30,12 +33,12 @@
 
   <div class="popup four off slide">
     <h3>Fourth timer begun!</h3>
-  </div>
+  </div> -->
 
   <div class="wrapper">
     <div id='form'>
 
-      <div class='box'>
+      <div class='box first'>
         <div class='copy-wrap'>
           <div class="user">
             <input id='user1' readonly='readonly' value='admin\user1'></input>
@@ -46,12 +49,17 @@
             <button id='first' type='button' class='btn btn-primary'>Copy Key</button>
           </div>
         </div>
+        <aside class='ticker' id='ticker-one'>
+          <p name="one">0h 0m 0s</p>
+          <button class="btn btn-success btn-timer">Start Timer</button>
+          <!-- <button class="btn btn-danger btn-stop">Stop Timer</button> -->
+          <aside>
         <!-- <aside class='ticker' id='ticker-one'>
           <p>0h 0m 0s</p>
           <aside> -->
       </div>
 
-      <div class='box'>
+      <div class='box second'>
         <div class='copy-wrap'>
           <div class="user">
             <input id='user2' readonly='readonly' value='admin\user2'></input>
@@ -62,12 +70,16 @@
             <button id='second' type='button' class='btn btn-secondary'>Copy Key</button>
           </div>
         </div>
+        <aside class='ticker' id='ticker-two'>
+          <p name="two">0h 0m 0s</p>
+          <button class="btn btn-success btn-timer">Start Timer</button>
+          <aside>
         <!-- <aside class='ticker' id='ticker-two'>
           <p>0h 0m 0s</p>
           <aside> -->
       </div>
 
-      <div class='box'>
+      <div class='box third'>
         <div class='copy-wrap'>
           <div class="user">
             <input id='user3' readonly='readonly' value='admin\user3'></input>
@@ -78,6 +90,28 @@
             <button id='third' type='button' class='btn btn-success'>Copy Key</button>
           </div>
         </div>
+        <aside class='ticker' id='ticker-three'>
+          <p name="three">0h 0m 0s</p>
+          <button class="btn btn-success btn-timer">Start Timer</button>
+          <aside>
+      </div>
+
+      <div class='box fourth'>
+        <div class='copy-wrap'>
+          <div class="user">
+            <input id='user4' readonly='readonly' value='admin\user4'></input>
+            <button id='user4btn' type='button' class='btn btn-info'>Copy Login</button>
+          </div>
+          <div class='key'>
+            <input id='four' placeholder='Fourth Key'>
+            <button id='fourth' type='button' class='btn btn-info'>Copy Key</button>
+          </div>
+        </div>
+        <aside class='ticker' id='ticker-four'>
+          <p>0h 0m 0s</p>
+          <button class="btn btn-success btn-timer">Start Timer</button>
+          <aside>
+      </div>
         <!-- <aside class='ticker' id='ticker-three'>
           <p>0h 0m 0s</p>
           <aside> -->
@@ -96,7 +130,12 @@
     <p>&copy; 2018, Josh Lawson</p>
   </footer>
 
+  <!-- <script src="js/index.js"></script> -->
+  <!-- <script src="js/scratch.js"></script> -->
+  <!-- <script src="js/time.js"></script> -->
+
   <script src="js/index.js"></script>
+
 
 </body>
 
