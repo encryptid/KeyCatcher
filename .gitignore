@@ -1,0 +1,5 @@
+*keycatcher.code-workspace
+
+*dist/
+
+*.cache/

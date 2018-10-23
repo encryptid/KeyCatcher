@@ -2,6 +2,12 @@
 A silly project for a co-worker with too many security keys to keep track of
 ## What's New
 
+###v2.2
+* Copy button works again.
+* Other stuff needs fixing
+  * time rolls over
+  * tone needs to be re-implemented
+
 ###v2.0
 * Each username gets a field and a dedicated timer
 * Modals removed altogether

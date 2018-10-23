@@ -1,8 +1,9 @@
 body {
-  background-image: url('../images/taton-moise-474481-unsplash.jpg');
+  background-image: url('../images/rapture.jpeg');
   background-size: 100%;
 }
-h1 {
+
+header {
   text-align: center;
   color: white;
   background: #3498db;
@@ -14,12 +15,8 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  /* height: 75vh; */
 }
-
-/* #form {
-  border: 2px dotted red;
-} */
 
 .copy-wrap {
   padding-right: 10px;
@@ -66,9 +63,6 @@ h1 {
 }
 
 .ticker {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   padding-left: 10px;
 }
 
@@ -89,8 +83,8 @@ h1 {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -151,3 +145,22 @@ footer p {
   75% {width: 100px;}
   100% {width: 2px;}
 } */
+
+@media (orientation: portrait) {
+  body {
+    background-image: url('../images/rapture-vert.jpeg');
+    background-size: cover;
+  }
+  header {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  footer {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

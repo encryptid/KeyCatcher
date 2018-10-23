@@ -1,0 +1,20 @@
+{
+  "name": "KeyCatcher",
+  "version": "1.0.0",
+  "description": "A silly project for a co-worker with too many security keys to keep track of\r ## What's New",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/encryptid/KeyCatcher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/encryptid/KeyCatcher/issues"
+  },
+  "homepage": "https://github.com/encryptid/KeyCatcher#readme"
+}
