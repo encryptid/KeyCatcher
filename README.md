@@ -2,6 +2,10 @@
 A silly project for a co-worker with too many security keys to keep track of
 ## What's New
 
+###v2.5
+* Code was refactored to remove sensitive information into JSON file, which also cleaned up HTML
+* Passwords will also appear secure, but still copy the contents.
+
 ###v2.2
 * Copy button works again.
 * Other stuff needs fixing

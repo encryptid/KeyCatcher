@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/encryptid/KeyCatcher/issues"
   },
-  "homepage": "https://github.com/encryptid/KeyCatcher#readme"
+  "homepage": "https://github.com/encryptid/KeyCatcher#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.7"
+  }
 }

@@ -1,6 +1,6 @@
 body {
   background-image: url('../images/rapture.jpeg');
-  background-size: 100%;
+  background-size: cover;
 }
 
 header {
@@ -20,17 +20,17 @@ header {
 
 .copy-wrap {
   padding-right: 10px;
-  border-right: 1px solid #ccc;
+  /* border-right: 1px solid #ccc; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-#form {
+/* #form {
   background: #ccc;
   padding: 2vh;
   border-radius: .5em;
-}
+} */
 
 /* .copy-wrap {
   padding-right: 12px;
@@ -39,17 +39,22 @@ header {
 } */
 
 .box {
-  margin: 0 auto;
-  padding: 25px 10px;
+  margin: 25px auto 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+  /* margin: 0 auto; */
+  /* padding: 25px 10px; */
+  min-width: 60vw;
   text-align: center;
   display: flex;
+  justify-content: space-around;
   background-color: white;
   opacity: .9;
   border-bottom: 1px solid gray;
 }
 
-.box:first-child {
-  margin-top: 0;
+.box:last-child {
+  margin-bottom: 2vh;
 }
 
 .user {
@@ -63,9 +68,9 @@ header {
   border: none;
   text-align: center;
   font-size: 1.25em;
-  width: 200px;
+  min-width: 225px;
   margin-right: 20px;
-  background: #ccc;
+  /* background: #ccc; */
 }
 
 .key {
@@ -77,6 +82,17 @@ header {
   text-align: center;
   min-width: 245px;
   margin-right: 10px;
+}
+
+/* .key input {
+  -webkit-text-security: disc;
+} */
+
+.brdr {
+  /* width: 5px; */
+  min-height: 100%;
+  /* background: red; */
+  border-right: 1px solid #ccc;
 }
 
 .ticker {
@@ -179,7 +195,7 @@ footer p {
   100% {width: 2px;}
 } */
 
-@media (orientation: portrait) {
+@media only screen and (orientation: portrait) {
   body {
     background-image: url('../images/rapture-vert.jpeg');
     background-size: cover;
@@ -197,3 +213,19 @@ footer p {
     justify-content: space-between;
   }
 }
+
+/* @media only screen and (max-width: 400px) {
+#form {
+  min-width: 90vw;
+}
+
+.box {
+  min-width: 90vw;
+}
+
+
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
+} */

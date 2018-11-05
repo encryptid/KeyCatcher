@@ -1,6 +1,33 @@
+import * as Creds from '../loginfo.json';
+
 window.addEventListener('load', function () {
 
-    const bell = new Audio('/sounds/definite.mp3');
+    let d = document;
+
+    const bell = new Audio('./sounds/definite.mp3');
+
+    const form = d.querySelector('#form');
+
+    Creds.credentials.forEach((cred) => {
+        form.innerHTML +=
+            `<div class='box ${cred.num}'>
+            <div class='copy-wrap'>
+            <div class="user">
+                <input readonly='readonly' value='${cred.login}'>
+                <button type='button' class='btn btn-primary'>Copy Login</button>
+            </div>
+            <form class='key'>
+                <input type='password' placeholder='${cred.num.charAt(0).toUpperCase() + cred.num.slice(1)} Key'>
+                <button type='button' class='btn btn-primary'>Copy Key</button>
+            </form>
+            </div>
+            <div class="brdr"></div>
+            <aside class='ticker' id='ticker-one'>
+            <p>0h 0m 0s</p>
+            <button class="btn btn-success btn-timer">Start Timer</button>
+            </aside>
+        </div>`
+    });
 
     const boxes = document.querySelectorAll('.box');
     // console.log(boxes);
@@ -16,8 +43,11 @@ window.addEventListener('load', function () {
         });
         let key = box.querySelector('.key');
         key.querySelector('button').addEventListener('click', () => {
-            key.querySelector('input').select();
+            let pw = key.querySelector('input');
+            pw.type = 'text';
+            pw.select();
             document.execCommand('copy');
+            pw.type = 'password';
             console.log(key);
         });
 
